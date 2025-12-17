@@ -5,8 +5,8 @@ import sqlite3
 db_path = "data/reviews.db"
 db_schema = """
     CREATE TABLE IF NOT EXISTS reviews (
-        id INTEGER PRIMARY KEY AUTOINCREMENT
-        name TEXT NOT NULL
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
         review TEXT NOT NULL 
     )
 """
@@ -36,6 +36,8 @@ def create_review():
     cursor.execute('INSERT INTO reviews (name, review) VALUES (?, ?)', (name, review))
     conn.commit()
     conn.close()
+
+    return '', 201
 
 
 @app.get('/reviews')
