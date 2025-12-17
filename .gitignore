@@ -1,0 +1,15 @@
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+
+# Flask instance folder (holds runtime files, e.g., SQLite db)
+instance/
+
+# Environment variable files
+*.env
