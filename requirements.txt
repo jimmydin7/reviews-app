@@ -1,3 +1,2 @@
 flask
-pysqlite3-binary
 gunicorn
